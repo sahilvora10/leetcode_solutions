@@ -21,8 +21,8 @@ class Solution:
             k = k%n
             # print(k)
         reverse_arr(nums,n-k,n-1)
-        # print(nums)
+        print(nums)
         reverse_arr(nums,0,n-k-1)
-        # print(nums)
+        print(nums)
         reverse_arr(nums,0,n-1)
-        # print(nums)
+        print(nums)
