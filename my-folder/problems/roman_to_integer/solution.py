@@ -16,7 +16,6 @@ class Solution:
             'CM':900
         }
         val = 0
-        # print(s[0:1])
         i = 0
         while i < len(s):
             if s[i:i+2] in rdict:
