@@ -5,17 +5,31 @@ class Solution:
         """
         m = len(matrix)
         n = len(matrix[0])
-        mem = []
+        zr = False
+        zc = False
         for i in range(0,m):
             for j in range(0,n):
                 if (matrix[i][j] == 0):
-                    mem.append([i,j])
-        # print(mem)
-        for point in mem:
-            for k in range(0,m):
-                # print (k,point[1])
-                matrix[k][point[1]] = 0
-            for k in range(0,n):
-                matrix[point[0]][k] = 0
+                    if i==0:
+                        zr = True 
+                    if j ==0:
+                        zc = True
+                    matrix[i][0] = matrix[0][j] = 0
+        print(matrix)
+        
+        for i in range(1,m):
+            for j in range(1,n):
+                if matrix[i][0] == 0 or matrix[0][j] == 0:
+                    matrix[i][j] = 0
+        
+        if zr:
+            for j in range(n):
+                matrix[0][j]=0
+        
+        if zc:
+            for i in range(m):
+                matrix[i][0]=0
+        
+    
                     
         
