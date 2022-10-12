@@ -3,6 +3,7 @@ class Solution:
         maxprofit = 0
         i = 0
         for j in range(1,len(prices)):
+            print(prices[j],prices[i])
             if prices[j]>prices[i]:
                 maxprofit= max(maxprofit,prices[j]-prices[i])
             else:
