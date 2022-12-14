@@ -26,9 +26,9 @@ class Solution:
         while b:
             b = b.next
             c2+=1
-        # print(c1,c2)
+        print(c1,c2)
         d = abs(c1-c2)
-        # print(d)
+        print(d)
         a = headA
         b = headB
         if c1>c2:
@@ -37,7 +37,7 @@ class Solution:
         else:
             for i in range(d):
                 b = b.next
-        # print(a,b)
+        print(a.val,b.val)
         while a and b:
             if a == b:
                 return a
